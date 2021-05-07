@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./newTemplate.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:define name="content">
+        <h:form>
+            <h1>Pesquisar Tarefas</h1>
+            <h:panelGrid>
+                 <h:commandButton value="Nova tarefa" action="cadTarefas"/>
+            </h:panelGrid>
+            <h:panelGrid columns="2">
+                Número:<h:inputText size="20"/>
+                Titulo/Descrição:<h:inputText size="70"/>
+                Responsável:<h:selectOneMenu>
+                    <f:selectItem itemValue="João" itemLabel="João"/>
+                    <f:selectItem itemValue="Maria" itemLabel="Maria"/>
+                    <f:selectItem itemValue="Mateus" itemLabel="Mateus"/>
+                </h:selectOneMenu>
+                Situação:<h:selectOneMenu>
+                    <f:selectItem itemValue="Em andamento" itemLabel="Em andamento"/>
+                    <f:selectItem itemValue="Concluido" itemLabel="Concluido"/>
+                </h:selectOneMenu>
+                <h:commandButton value="Pesquisar"/>
+            </h:panelGrid>
+        </h:form>
+    </ui:define>
+
+</ui:composition>
